@@ -6,3 +6,15 @@ var map = new mapboxgl.Map({
   center: [38.05447, 0.2047],
   zoom: 5.8,
 });
+locations.forEach(function (location) {
+  var marker = new mapboxgl.Marker()
+    .setLngLat([location.longitude, location.latitude])
+    .addTo(map);
+});
+var bounds = locations.reduce(function (bounds, location) {
+  return bounds.extend([location.longitude, location.latitude]);
+}, new mapboxgl.LngLatBounds(locations[0], locations[0]));
+
+map.fitBounds(bounds, {
+  padding: 20,
+});
