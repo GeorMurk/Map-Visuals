@@ -1,5 +1,7 @@
 # Map Visuals
 
+---
+
 Mapbox to show different Map Visuals in Kenya.
 
 <li>Schools</li>
