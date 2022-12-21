@@ -14,4 +14,5 @@ h1 {
 .footer-container {
   position: fixed;
   bottom: 0;
+  background-color: crimson;
 }
