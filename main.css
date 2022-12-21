@@ -10,9 +10,5 @@ h1 {
   height: 800px;
   width: 1180px;
   position: absolute;
-}
-.footer-container {
-  position: fixed;
-  bottom: 0;
-  background-color: crimson;
+  right: 5px;
 }
