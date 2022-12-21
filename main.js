@@ -6,6 +6,19 @@ var map = new mapboxgl.Map({
   center: [38.05447, 0.2047],
   zoom: 5.8,
 });
+
+// fetch("path/to/data.csv")
+//   .then((response) => response.text())
+//   .then((data) => {
+//     var parsedData = Papa.parse(data, {
+//       header: true,
+//     });
+//     var coordinates = parsedData.data.map((point) => [
+//       point.longitude,
+//       point.latitude,
+//     ]);
+//   });
+
 locations.forEach(function (location) {
   var marker = new mapboxgl.Marker()
     .setLngLat([location.longitude, location.latitude])
