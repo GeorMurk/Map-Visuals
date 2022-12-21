@@ -11,3 +11,7 @@ h1 {
   position: absolute;
   right: 5px;
 }
+#Footer {
+  position: fixed;
+  bottom: 0;
+}
