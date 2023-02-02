@@ -28,6 +28,17 @@ var bounds = locations.reduce(function (bounds, location) {
   return bounds.extend([location.longitude, location.latitude]);
 }, new mapboxgl.LngLatBounds(locations[0], locations[0]));
 
+map.on('style.load', () => {
+map.addSource('mapbox-dem', {
+'type': 'raster-dem',
+'url': 'mapbox://mapbox.mapbox-terrain-dem-v1',
+'tileSize': 512,
+'maxzoom': 14
+});
+// add the DEM source as a terrain layer with exaggerated height
+map.setTerrain({ 'source': 'mapbox-dem', 'exaggeration': 1.5 });
+});
+
 map.fitBounds(bounds, {
   padding: 20,
 });
