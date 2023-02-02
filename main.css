@@ -9,8 +9,6 @@ h1 {
 #map {
   height: 740px;
   width: 1180px;
- % max-height: 100vh;
- % overflow: auto;
   position: absolute;
   right: 0.5px;
 }
