@@ -7,8 +7,10 @@ h1 {
   font-family: "Noto Sans JP", sans-serif;
 }
 #map {
-  height: 100%;
+  height: auto;
   width: 1180px;
+  max-height: 100vh;
+  overflow: auto;
   position: absolute;
   right: 0.5px;
 }
