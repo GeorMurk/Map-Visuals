@@ -6,39 +6,3 @@ var map = new mapboxgl.Map({
   center: [38.05447, 0.2047],
   zoom: 5.8,
 });
-
-// fetch("path/to/data.csv")
-//   .then((response) => response.text())
-//   .then((data) => {
-//     var parsedData = Papa.parse(data, {
-//       header: true,
-//     });
-//     var coordinates = parsedData.data.map((point) => [
-//       point.longitude,
-//       point.latitude,
-//     ]);
-//   });
-
-locations.forEach(function (location) {
-  var marker = new mapboxgl.Marker()
-    .setLngLat([location.longitude, location.latitude])
-    .addTo(map);
-});
-var bounds = locations.reduce(function (bounds, location) {
-  return bounds.extend([location.longitude, location.latitude]);
-}, new mapboxgl.LngLatBounds(locations[0], locations[0]));
-
-map.on('style.load', () => {
-map.addSource('mapbox-dem', {
-'type': 'raster-dem',
-'url': 'mapbox://mapbox.mapbox-terrain-dem-v1',
-'tileSize': 512,
-'maxzoom': 14
-});
-// add the DEM source as a terrain layer with exaggerated height
-map.setTerrain({ 'source': 'mapbox-dem', 'exaggeration': 1.5 });
-});
-
-map.fitBounds(bounds, {
-  padding: 20,
-});
