@@ -6,3 +6,22 @@ var map = new mapboxgl.Map({
   center: [38.05447, 0.2047],
   zoom: 5.8,
 });
+
+map.on("load", function () {
+  map.addSource("mobilemoney", {
+    type: "geojson",
+    data: "data/agents.geojson",
+  });
+});
+
+map.on("load", function () {
+  map.addLayer({
+    id: "mobilemoney",
+    type: "symbol",
+    source: "mobilemoney",
+    layout: {
+      "icon-image": "{icon}-15",
+      "icon-allow-overlap": true,
+    },
+  });
+});
