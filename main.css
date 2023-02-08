@@ -6,10 +6,34 @@ body {
 h1 {
   font-family: "Noto Sans JP", sans-serif;
 }
-#map {
+#blank_map {
   top: 0;
   bottom: 0;
-  width: 1180px;
+  width: 75%;
+  position: absolute;
+  right: 0.5px;
+}
+
+#market_map {
+  top: 0;
+  bottom: 0;
+  width: 75%;
+  position: absolute;
+  right: 0.5px;
+}
+
+#fsp_map {
+  top: 0;
+  bottom: 0;
+  width: 75%;
+  position: absolute;
+  right: 0.5px;
+}
+
+#primary_school_map {
+  top: 0;
+  bottom: 0;
+  width: 75%;
   position: absolute;
   right: 0.5px;
 }
