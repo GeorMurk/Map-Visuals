@@ -14,7 +14,7 @@ var map = new mapboxgl.Map({
 map.on("load", () => {
   map.addSource("schools", {
     type: "geojson",
-    data: "data\schools.geojson",
+    data: "data/schools.geojson",
   });
 
   map.addLayer({
@@ -37,7 +37,7 @@ map.on("load", () => {
 map.on("load", () => {
   map.addSource("agents", {
     type: "geojson",
-    data: "data\agents.geojson",
+    data: "data/agents.geojson",
   });
 
   map.addLayer({
@@ -60,7 +60,7 @@ map.on("load", () => {
 map.on("load", () => {
   map.addSource("markets", {
     type: "geojson",
-    data: "data\KAMIS_MAP_1\Other_Markets.geojson",
+    data: "data/KAMIS_MAP_1/Other_Markets.geojson",
   });
 
   map.addLayer({
