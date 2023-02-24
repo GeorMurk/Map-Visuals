@@ -43,7 +43,6 @@ map.on("load", () => {
     id: "agents-layer",
     type: "circle",
     source: "agents",
-    // layout: { visibility: "visible" },
     paint: {
       "circle-radius": 4,
       "circle-stroke-width": 0.5,
